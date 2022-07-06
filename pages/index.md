@@ -1,11 +1,12 @@
 # Home
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+This is my personal CheatBook for all Data Science stuff and related topics. Feel free to use it!
 
-Check out the content pages bundled with this sample book to see more.
+I'm currently building this book so it is not yet complete. Feel free to give me some feedback and suggestions!
+
+Happy Coding!
+
+---
 
 ```{tableofcontents}
 
