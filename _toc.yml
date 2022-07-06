@@ -1,0 +1,50 @@
+format: jb-book
+root: pages/index
+defaults:
+    titlesonly: true
+parts:
+    - caption: Data Visualization - 📊
+      chapters:
+          - file: pages/visualization/visualization_settings
+            title: Visualization Settings
+          - file: pages/visualization/distribution/distribution
+            title: Distribution
+            sections:
+                - file: pages/visualization/distribution/violin
+                  title: Violin
+                - file: pages/visualization/distribution/density
+                  title: Density
+                - file: pages/visualization/distribution/histogram
+                  title: Histogram
+                - file: pages/visualization/distribution/boxplot
+                  title: Boxplot
+                - file: pages/visualization/distribution/ridgeline
+                  title: Ridgeline
+          - file: pages/visualization/correlation/correlation
+            title: Correlation
+            sections:
+                - file: pages/visualization/correlation/scatter
+                  title: Scatterplot
+                - file: pages/visualization/correlation/conscatter
+                  title: Connected Scatterplot
+                - file: pages/visualization/correlation/heatmap
+                  title: Heatmap
+                - file: pages/visualization/correlation/correlogram
+                  title: Correlogram
+                - file: pages/visualization/correlation/bubble
+                  title: Bubble
+                - file: pages/visualization/correlation/density
+                  title: Density
+          - file: pages/visualization/ranking/ranking
+            title: Ranking
+            sections:
+                - file: pages/visualization/ranking/vbarplot
+                  title: Vertical Barplot
+                - file: pages/visualization/ranking/hbarplot
+                  title: Horizontal Boxplot
+                - file: pages/visualization/ranking/spiderradar
+                  title: Spider / Radar
+                - file: pages/visualization/ranking/wordcloud
+                  title: Word Cloud
+                - file: pages/visualization/ranking/lollipop
+                  title: Lollipop

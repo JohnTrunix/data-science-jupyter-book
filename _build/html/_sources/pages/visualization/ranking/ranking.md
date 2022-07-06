@@ -1,0 +1,7 @@
+# Ranking
+
+```{tableofcontents}
+
+```
+
+---
