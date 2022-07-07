@@ -26,6 +26,7 @@ html:
     favicon: favicon.ico
     use_issues_button: true
     use_repository_button: true
+    baseurl: https://johntrunix.github.io/data-science-jupyter-book/pages/index.html
 
 sphinx:
     config:
