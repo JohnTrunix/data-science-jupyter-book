@@ -48,3 +48,18 @@ parts:
                   title: Word Cloud
                 - file: pages/visualization/ranking/lollipop
                   title: Lollipop
+          - file: pages/visualization/partof/partof
+            title: Part of
+            sections:
+                - file: pages/visualization/partof/pie
+                  title: Pie Chart
+                - file: pages/visualization/partof/donut
+                  title: Donut Chart
+                - file: pages/visualization/partof/treemap
+                  title: Tree Map
+                - file: pages/visualization/partof/venndiagram
+                  title: Venn Diagram
+                - file: pages/visualization/partof/dendrogram
+                  title: Dendrogram
+                - file: pages/visualization/partof/circularpacking
+                  title: Circular Packing
