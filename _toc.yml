@@ -15,3 +15,7 @@ parts:
                   sections:
                       - file: pages/visualization/visuals/charts/donut
                         title: Donut Chart
+                      - file: pages/visualization/visuals/charts/radialbar
+                        title: Radial Bar Chart
+                      - file: pages/visualization/visuals/charts/polararea
+                        title: Polar Area Chart
