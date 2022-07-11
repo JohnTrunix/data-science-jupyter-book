@@ -15,6 +15,10 @@ parts:
                   sections:
                       - file: pages/visualization/visuals/charts/donut
                         title: Donut Chart
+                      - file: pages/visualization/visuals/charts/vbar
+                        title: Bar Chart (vertical)
+                      - file: pages/visualization/visuals/charts/hbar
+                        title: Bar Chart (horizontal)
                       - file: pages/visualization/visuals/charts/radialbar
                         title: Radial Bar Chart
                       - file: pages/visualization/visuals/charts/polararea
