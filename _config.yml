@@ -9,6 +9,13 @@ execute:
     allow_errors: true
 
 parse:
+    myst_enable_extensions:
+        - html_admonition
+        - html_image
+        - linkify
+        - substitution
+        - colon_fence
+        - dollarmath
     myst_url_schemes: [mailto, http, https]
     myst_dmath_double_inline: true
 

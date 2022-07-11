@@ -5,61 +5,13 @@ defaults:
 parts:
     - caption: Data Visualization - 📊
       chapters:
-          - file: pages/visualization/visualization_settings
-            title: Visualization Settings
-          - file: pages/visualization/distribution/distribution
-            title: Distribution
+          - file: pages/visualization/matplotlib_seaborn
+            title: Matplotlib and Seaborn Config
+          - file: pages/visualization/visuals/graphfamilys
+            title: Graph Familys
             sections:
-                - file: pages/visualization/distribution/violin
-                  title: Violin
-                - file: pages/visualization/distribution/density
-                  title: Density
-                - file: pages/visualization/distribution/histogram
-                  title: Histogram
-                - file: pages/visualization/distribution/boxplot
-                  title: Boxplot
-                - file: pages/visualization/distribution/ridgeline
-                  title: Ridgeline
-          - file: pages/visualization/correlation/correlation
-            title: Correlation
-            sections:
-                - file: pages/visualization/correlation/scatter
-                  title: Scatterplot
-                - file: pages/visualization/correlation/conscatter
-                  title: Connected Scatterplot
-                - file: pages/visualization/correlation/heatmap
-                  title: Heatmap
-                - file: pages/visualization/correlation/correlogram
-                  title: Correlogram
-                - file: pages/visualization/correlation/bubble
-                  title: Bubble
-                - file: pages/visualization/correlation/density
-                  title: Density
-          - file: pages/visualization/ranking/ranking
-            title: Ranking
-            sections:
-                - file: pages/visualization/ranking/vbarplot
-                  title: Vertical Barplot
-                - file: pages/visualization/ranking/hbarplot
-                  title: Horizontal Boxplot
-                - file: pages/visualization/ranking/spiderradar
-                  title: Spider / Radar
-                - file: pages/visualization/ranking/wordcloud
-                  title: Word Cloud
-                - file: pages/visualization/ranking/lollipop
-                  title: Lollipop
-          - file: pages/visualization/partof/partof
-            title: Part of
-            sections:
-                - file: pages/visualization/partof/pie
-                  title: Pie Chart
-                - file: pages/visualization/partof/donut
-                  title: Donut Chart
-                - file: pages/visualization/partof/treemap
-                  title: Tree Map
-                - file: pages/visualization/partof/venndiagram
-                  title: Venn Diagram
-                - file: pages/visualization/partof/dendrogram
-                  title: Dendrogram
-                - file: pages/visualization/partof/circularpacking
-                  title: Circular Packing
+                - file: pages/visualization/visuals/charts/charts
+                  title: Charts
+                  sections:
+                      - file: pages/visualization/visuals/charts/donut
+                        title: Donut Chart
