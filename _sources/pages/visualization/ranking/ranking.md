@@ -1,9 +1,0 @@
-# Ranking
-
-```{tableofcontents}
-
-```
-
----
-
-## Ranking Definition

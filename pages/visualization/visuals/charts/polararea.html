@@ -43,6 +43,7 @@
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../../../../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../../../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
@@ -55,7 +56,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="prev" title="Radial Bar Chart" href="radialbar.html" />
+    <link rel="prev" title="Sunburst Chart" href="sunburst.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -162,8 +163,48 @@ const thebe_selector_output = ".output, .cell_output"
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="stackedbar.html">
+       Bar Chart (stacked)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="treemap.html">
+       Treemap Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="heatmap.html">
+       Heatmap Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="streamgraph.html">
+       Stream Graph Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="wordcloud.html">
+       Wordcloud Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="progressbar.html">
+       Progress Bar Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="radialbar.html">
        Radial Bar Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="chord.html">
+       Chord Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="sunburst.html">
+       Sunburst Chart
       </a>
      </li>
      <li class="toctree-l3 current active">
@@ -484,12 +525,10 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpl</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;seaborn&#39;</span><span class="p">)</span>
 <span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#002855&#39;</span><span class="p">,</span> <span class="s1">&#39;#FBD87F&#39;</span><span class="p">,</span> <span class="s1">&#39;#023E7D&#39;</span><span class="p">,</span> <span class="s1">&#39;#376996&#39;</span><span class="p">,</span> <span class="s1">&#39;#829CBC&#39;</span><span class="p">,</span> <span class="s1">&#39;#F8C23A&#39;</span><span class="p">]</span>
-
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+
 <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">polar</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
-
-
 <span class="n">upperLimit</span> <span class="o">=</span> <span class="mi">100</span>
 <span class="n">lowerLimit</span> <span class="o">=</span> <span class="mi">30</span>
 <span class="nb">max</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
@@ -562,11 +601,11 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="radialbar.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="sunburst.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Radial Bar Chart</p>
+            <p class="prev-next-title">Sunburst Chart</p>
         </div>
     </a>
 </div>
