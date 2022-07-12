@@ -4,3 +4,5 @@ squarify
 circlify
 wordcloud
 matplotlib_venn
+plotly
+mpl_chord_diagram

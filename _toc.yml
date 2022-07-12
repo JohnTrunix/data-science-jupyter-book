@@ -13,13 +13,33 @@ parts:
                 - file: pages/visualization/visuals/charts/charts
                   title: Charts
                   sections:
+                      - file: pages/visualization/visuals/charts/pie
+                        title: Pie Chart
                       - file: pages/visualization/visuals/charts/donut
                         title: Donut Chart
                       - file: pages/visualization/visuals/charts/vbar
                         title: Bar Chart (vertical)
                       - file: pages/visualization/visuals/charts/hbar
                         title: Bar Chart (horizontal)
+                      - file: pages/visualization/visuals/charts/stackedbar
+                        title: Bar Chart (stacked)
+                      - file: pages/visualization/visuals/charts/groupedbar
+                        title: Bar Chart (grouped)
+                      - file: pages/visualization/visuals/charts/treemap
+                        title: Treemap Chart
+                      - file: pages/visualization/visuals/charts/heatmap
+                        title: Heatmap Chart
+                      - file: pages/visualization/visuals/charts/streamgraph
+                        title: Stream Graph Chart
+                      - file: pages/visualization/visuals/charts/wordcloud
+                        title: Wordcloud Chart
+                      - file: pages/visualization/visuals/charts/progressbar
+                        title: Progress Bar Chart
                       - file: pages/visualization/visuals/charts/radialbar
                         title: Radial Bar Chart
+                      - file: pages/visualization/visuals/charts/chord
+                        title: Chord Chart
+                      - file: pages/visualization/visuals/charts/sunburst
+                        title: Sunburst Chart
                       - file: pages/visualization/visuals/charts/polararea
                         title: Polar Area Chart
