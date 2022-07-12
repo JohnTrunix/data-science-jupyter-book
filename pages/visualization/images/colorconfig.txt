@@ -1,0 +1,6 @@
+darkblue: #002855
+blue: #023E7D
+greyblue: #376996
+ligthblue: #829CBC
+lightyellow: #FBD87F
+yellow: #F8C23A
