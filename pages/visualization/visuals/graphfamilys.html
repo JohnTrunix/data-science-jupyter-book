@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Venn Diagram &#8212; My Data Science CheatSheet</title>
+    <title>Graph Familys &#8212; My Data Science CheatSheet</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -51,12 +51,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://johntrunix.github.io/data-science-jupyter-book/pages/index.html/pages/visualization/partof/venndiagram.html" />
+    <link rel="canonical" href="https://johntrunix.github.io/data-science-jupyter-book/pages/index.html/pages/visualization/visuals/graphfamilys.html" />
     <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Dendogram" href="dendrogram.html" />
-    <link rel="prev" title="Treemap" href="treemap.html" />
+    <link rel="next" title="Charts" href="charts/charts.html" />
+    <link rel="prev" title="Matplotlib and Seaborn Config" href="../matplotlib_seaborn.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -123,165 +123,56 @@ const thebe_selector_output = ".output, .cell_output"
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../visualization_settings.html">
-   Visualization Settings
+  <a class="reference internal" href="../matplotlib_seaborn.html">
+   Matplotlib and Seaborn Config
   </a>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../distribution/distribution.html">
-   Distribution
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   Graph Familys
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
   <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../distribution/violin.html">
-     Violin
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="charts/charts.html">
+     Charts
     </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../distribution/density.html">
-     Density
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../distribution/histogram.html">
-     Histogram
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../distribution/boxplot.html">
-     Boxplot
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../distribution/ridgeline.html">
-     Ridgeline
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../correlation/correlation.html">
-   Correlation
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../correlation/scatter.html">
-     Scatterplot
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../correlation/conscatter.html">
-     Connected Scatterplot
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../correlation/heatmap.html">
-     Heatmap
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../correlation/correlogram.html">
-     Correlogram
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../correlation/bubble.html">
-     Bubble
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../correlation/density.html">
-     Density
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../ranking/ranking.html">
-   Ranking
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../ranking/vbarplot.html">
-     Vertical Barplot
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../ranking/hbarplot.html">
-     Horizontal Boxplot
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../ranking/spiderradar.html">
-     Spider / Radar
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../ranking/wordcloud.html">
-     Word Cloud
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../ranking/lollipop.html">
-     Lollipop
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="partof.html">
-   Part of
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="pie.html">
-     Pie Chart
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="donut.html">
-     Donut Chart
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="treemap.html">
-     Tree Map
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Venn Diagram
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="dendrogram.html">
-     Dendrogram
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="circularpacking.html">
-     Circular Packing
-    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="charts/donut.html">
+       Donut Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="charts/vbar.html">
+       Bar Chart (vertical)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="charts/hbar.html">
+       Bar Chart (horizontal)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="charts/radialbar.html">
+       Radial Bar Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="charts/polararea.html">
+       Polar Area Chart
+      </a>
+     </li>
+    </ul>
    </li>
   </ul>
  </li>
@@ -336,35 +227,6 @@ title="Toggle navigation"
         
     </div>
     <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
-  </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/JohnTrunix/data-science-jupyter-book/master?urlpath=tree/pages/visualization/partof/venndiagram.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
->
-  
-
-<span class="headerbtn__icon-container">
-  
-    <img src="../../../_static/images/logo_binder.svg">
-  </span>
-<span class="headerbtn__text-container">Binder</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
 <button onclick="toggleFullScreen()"
   class="headerbtn"
   data-toggle="tooltip"
@@ -404,7 +266,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/JohnTrunix/data-science-jupyter-book//issues/new?title=Issue%20on%20page%20%2Fpages/visualization/partof/venndiagram.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/JohnTrunix/data-science-jupyter-book//issues/new?title=Issue%20on%20page%20%2Fpages/visualization/visuals/graphfamilys.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -432,7 +294,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../../_sources/pages/visualization/partof/venndiagram.ipynb"
+        <a href="../../../_sources/pages/visualization/visuals/graphfamilys.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -443,7 +305,7 @@ title="Download source file"
 <span class="headerbtn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="headerbtn__text-container">.ipynb</span>
+<span class="headerbtn__text-container">.md</span>
 </a>
 
       </li>
@@ -481,7 +343,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Venn Diagram</h1>
+                <h1>Graph Familys</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -493,44 +355,19 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="venn-diagram">
-<h1>Venn Diagram<a class="headerlink" href="#venn-diagram" title="Permalink to this headline">#</a></h1>
-<p>A Venn Diagram (also called primary diagram, set diagram or logic diagram) is a diagram that shows all possible logical relationships between a finite collection of different sets.</p>
-<p><a class="reference external" href="https://www.python-graph-gallery.com/venn-diagram/">Source</a></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">matplotlib_venn</span> <span class="kn">import</span> <span class="n">venn2</span>
-<span class="kn">from</span> <span class="nn">matplotlib_venn</span> <span class="kn">import</span> <span class="n">venn3</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">patch</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
-<span class="n">venn2</span><span class="p">(</span><span class="n">subsets</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">set_labels</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Group A&#39;</span><span class="p">,</span> <span class="s1">&#39;Group B&#39;</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../../_images/venndiagram_3_0.png" src="../../../_images/venndiagram_3_0.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">patch</span><span class="o">.</span><span class="n">set_facecolor</span><span class="p">(</span><span class="s1">&#39;white&#39;</span><span class="p">)</span>
-<span class="n">venn3</span><span class="p">(</span><span class="n">subsets</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../../../_images/venndiagram_4_0.png" src="../../../_images/venndiagram_4_0.png" />
-</div>
+  <section class="tex2jax_ignore mathjax_ignore" id="graph-familys">
+<h1>Graph Familys<a class="headerlink" href="#graph-familys" title="Permalink to this headline">#</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="charts/charts.html">Charts</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="charts/donut.html">Donut Chart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="charts/vbar.html">Bar Chart (vertical)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="charts/hbar.html">Bar Chart (horizontal)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="charts/radialbar.html">Radial Bar Chart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="charts/polararea.html">Polar Area Chart</a></li>
+</ul>
+</li>
+</ul>
 </div>
 </section>
 
@@ -547,7 +384,7 @@ title="Print to PDF"
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./pages\visualization\partof"
+            path: "./pages\visualization\visuals"
         },
         predefinedOutput: true
     }
@@ -561,17 +398,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="treemap.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../matplotlib_seaborn.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Treemap</p>
+            <p class="prev-next-title">Matplotlib and Seaborn Config</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="dendrogram.html" title="next page">
+    <a class='right-next' id="next-link" href="charts/charts.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Dendogram</p>
+        <p class="prev-next-title">Charts</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
