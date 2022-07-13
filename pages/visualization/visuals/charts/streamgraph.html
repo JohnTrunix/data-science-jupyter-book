@@ -57,7 +57,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Word Cloud Chart" href="wordcloud.html" />
-    <link rel="prev" title="Heatmap Chart" href="heatmap.html" />
+    <link rel="prev" title="Stacked Area Chart (100%)" href="stackedarea100.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -179,6 +179,11 @@ const thebe_selector_output = ".output, .cell_output"
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="scatter.html">
+       Scatter Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="treemap.html">
        Treemap Chart
       </a>
@@ -186,6 +191,21 @@ const thebe_selector_output = ".output, .cell_output"
      <li class="toctree-l3">
       <a class="reference internal" href="heatmap.html">
        Heatmap Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="radar.html">
+       Radar Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stackedarea.html">
+       Stacked Area Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="stackedarea100.html">
+       Stacked Area Chart (100%)
       </a>
      </li>
      <li class="toctree-l3 current active">
@@ -199,8 +219,8 @@ const thebe_selector_output = ".output, .cell_output"
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="progressbar.html">
-       Progress Bar Chart
+      <a class="reference internal" href="nestedproparea.html">
+       Nested Proportional Area Chart
       </a>
      </li>
      <li class="toctree-l3">
@@ -216,6 +236,21 @@ const thebe_selector_output = ".output, .cell_output"
      <li class="toctree-l3">
       <a class="reference internal" href="sunburst.html">
        Sunburst Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="funnel.html">
+       Funnel Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="hangingrootogram.html">
+       Hanging Rootogram Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="progressbar.html">
+       Progress Bar Chart
       </a>
      </li>
      <li class="toctree-l3">
@@ -469,7 +504,6 @@ title="Print to PDF"
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
 </pre></div>
 </div>
 </div>
@@ -511,48 +545,48 @@ title="Print to PDF"
   <tbody>
     <tr>
       <th>1990</th>
-      <td>0.597336</td>
-      <td>0.614037</td>
-      <td>0.195183</td>
-      <td>0.689214</td>
-      <td>0.308344</td>
-      <td>0.498146</td>
+      <td>0.550635</td>
+      <td>0.577132</td>
+      <td>0.874543</td>
+      <td>0.860423</td>
+      <td>0.462009</td>
+      <td>0.782000</td>
     </tr>
     <tr>
       <th>1991</th>
-      <td>0.800094</td>
-      <td>0.543191</td>
-      <td>0.597474</td>
-      <td>0.930932</td>
-      <td>0.106526</td>
-      <td>0.361841</td>
+      <td>0.825351</td>
+      <td>0.697172</td>
+      <td>0.159894</td>
+      <td>0.266105</td>
+      <td>0.541371</td>
+      <td>0.099260</td>
     </tr>
     <tr>
       <th>1992</th>
-      <td>0.324940</td>
-      <td>0.631033</td>
-      <td>0.281045</td>
-      <td>0.488824</td>
-      <td>0.681732</td>
-      <td>0.014668</td>
+      <td>0.744086</td>
+      <td>0.380796</td>
+      <td>0.981503</td>
+      <td>0.956556</td>
+      <td>0.218905</td>
+      <td>0.617071</td>
     </tr>
     <tr>
       <th>1993</th>
-      <td>0.953744</td>
-      <td>0.070962</td>
-      <td>0.858770</td>
-      <td>0.265730</td>
-      <td>0.016481</td>
-      <td>0.253955</td>
+      <td>0.527875</td>
+      <td>0.750730</td>
+      <td>0.680694</td>
+      <td>0.729667</td>
+      <td>0.481715</td>
+      <td>0.830631</td>
     </tr>
     <tr>
       <th>1994</th>
-      <td>0.837485</td>
-      <td>0.634248</td>
-      <td>0.798976</td>
-      <td>0.420473</td>
-      <td>0.367934</td>
-      <td>0.492761</td>
+      <td>0.398035</td>
+      <td>0.340475</td>
+      <td>0.426850</td>
+      <td>0.269706</td>
+      <td>0.391760</td>
+      <td>0.615635</td>
     </tr>
   </tbody>
 </table>
@@ -603,11 +637,11 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="heatmap.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="stackedarea100.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Heatmap Chart</p>
+            <p class="prev-next-title">Stacked Area Chart (100%)</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="wordcloud.html" title="next page">
