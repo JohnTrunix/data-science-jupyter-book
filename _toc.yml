@@ -25,21 +25,35 @@ parts:
                         title: Bar Chart (stacked)
                       - file: pages/visualization/visuals/charts/groupedbar
                         title: Bar Chart (grouped)
+                      - file: pages/visualization/visuals/charts/scatter
+                        title: Scatter Chart
                       - file: pages/visualization/visuals/charts/treemap
                         title: Treemap Chart
                       - file: pages/visualization/visuals/charts/heatmap
                         title: Heatmap Chart
+                      - file: pages/visualization/visuals/charts/radar
+                        title: Radar Chart
+                      - file: pages/visualization/visuals/charts/stackedarea
+                        title: Stacked Area Chart
+                      - file: pages/visualization/visuals/charts/stackedarea100
+                        title: Stacked Area Chart (100%)
                       - file: pages/visualization/visuals/charts/streamgraph
                         title: Stream Graph Chart
                       - file: pages/visualization/visuals/charts/wordcloud
                         title: Wordcloud Chart
-                      - file: pages/visualization/visuals/charts/progressbar
-                        title: Progress Bar Chart
+                      - file: pages/visualization/visuals/charts/nestedproparea
+                        title: Nested Proportional Area Chart
                       - file: pages/visualization/visuals/charts/radialbar
                         title: Radial Bar Chart
                       - file: pages/visualization/visuals/charts/chord
                         title: Chord Chart
                       - file: pages/visualization/visuals/charts/sunburst
                         title: Sunburst Chart
+                      - file: pages/visualization/visuals/charts/funnel
+                        title: Funnel Chart
+                      - file: pages/visualization/visuals/charts/hangingrootogram
+                        title: Hanging Rootogram Chart
+                      - file: pages/visualization/visuals/charts/progressbar
+                        title: Progress Bar Chart
                       - file: pages/visualization/visuals/charts/polararea
                         title: Polar Area Chart
