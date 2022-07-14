@@ -33,14 +33,13 @@ footer > div.container {
     background-color: #13c3ff;
     cursor: pointer !important;
     text-decoration: none !important;
-    transform: delay(100ms);
     transition: all 500ms ease-in-out;
 }
 
 .coffee_button_box:hover {
     background-color: #13c3ff;
     color: white;
-    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+    box-shadow: 0 20px 60px #bebebe, 0 -20px 60px #ffffff;
     transform: translateY(-0.25rem);
 }
 
