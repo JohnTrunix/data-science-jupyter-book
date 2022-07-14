@@ -1,59 +1,59 @@
 format: jb-book
-root: pages/index
+root: index
 defaults:
     titlesonly: true
 parts:
     - caption: Data Visualization - 📊
       chapters:
-          - file: pages/visualization/matplotlib_seaborn
+          - file: visualization/matplotlib_seaborn
             title: Matplotlib and Seaborn Config
-          - file: pages/visualization/visuals/graphfamilys
+          - file: visualization/graphfamilys
             title: Graph Familys
             sections:
-                - file: pages/visualization/visuals/charts/charts
+                - file: visualization/charts/charts
                   title: Charts
                   sections:
-                      - file: pages/visualization/visuals/charts/pie
+                      - file: visualization/charts/pie
                         title: Pie Chart
-                      - file: pages/visualization/visuals/charts/donut
+                      - file: visualization/charts/donut
                         title: Donut Chart
-                      - file: pages/visualization/visuals/charts/vbar
+                      - file: visualization/charts/vbar
                         title: Bar Chart (vertical)
-                      - file: pages/visualization/visuals/charts/hbar
+                      - file: visualization/charts/hbar
                         title: Bar Chart (horizontal)
-                      - file: pages/visualization/visuals/charts/stackedbar
+                      - file: visualization/charts/stackedbar
                         title: Bar Chart (stacked)
-                      - file: pages/visualization/visuals/charts/groupedbar
+                      - file: visualization/charts/groupedbar
                         title: Bar Chart (grouped)
-                      - file: pages/visualization/visuals/charts/scatter
+                      - file: visualization/charts/scatter
                         title: Scatter Chart
-                      - file: pages/visualization/visuals/charts/treemap
+                      - file: visualization/charts/treemap
                         title: Treemap Chart
-                      - file: pages/visualization/visuals/charts/heatmap
+                      - file: visualization/charts/heatmap
                         title: Heatmap Chart
-                      - file: pages/visualization/visuals/charts/radar
+                      - file: visualization/charts/radar
                         title: Radar Chart
-                      - file: pages/visualization/visuals/charts/stackedarea
+                      - file: visualization/charts/stackedarea
                         title: Stacked Area Chart
-                      - file: pages/visualization/visuals/charts/stackedarea100
+                      - file: visualization/charts/stackedarea100
                         title: Stacked Area Chart (100%)
-                      - file: pages/visualization/visuals/charts/streamgraph
+                      - file: visualization/charts/streamgraph
                         title: Stream Graph Chart
-                      - file: pages/visualization/visuals/charts/wordcloud
+                      - file: visualization/charts/wordcloud
                         title: Wordcloud Chart
-                      - file: pages/visualization/visuals/charts/nestedproparea
+                      - file: visualization/charts/nestedproparea
                         title: Nested Proportional Area Chart
-                      - file: pages/visualization/visuals/charts/radialbar
+                      - file: visualization/charts/radialbar
                         title: Radial Bar Chart
-                      - file: pages/visualization/visuals/charts/chord
+                      - file: visualization/charts/chord
                         title: Chord Chart
-                      - file: pages/visualization/visuals/charts/sunburst
+                      - file: visualization/charts/sunburst
                         title: Sunburst Chart
-                      - file: pages/visualization/visuals/charts/funnel
+                      - file: visualization/charts/funnel
                         title: Funnel Chart
-                      - file: pages/visualization/visuals/charts/hangingrootogram
+                      - file: visualization/charts/hangingrootogram
                         title: Hanging Rootogram Chart
-                      - file: pages/visualization/visuals/charts/progressbar
+                      - file: visualization/charts/progressbar
                         title: Progress Bar Chart
-                      - file: pages/visualization/visuals/charts/polararea
+                      - file: visualization/charts/polararea
                         title: Polar Area Chart

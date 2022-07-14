@@ -40,52 +40,65 @@ html:
     use_repository_button: true
     baseurl: https://johntrunix.github.io/data-science-jupyter-book/pages/index.html
     extra_navbar: |
-        <div class="app_container_social">
-            <a
-                class="app_container_social_icon"
-                href="https://www.linkedin.com/in/john-truninger/"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 236.656 236.656" style="enable-background:new 0 0 236.656 236.656;" xml:space="preserve">
-                    <g>
-                        <path style="fill:#000000;" d="M206.045,87.682c32.726,28.83,27.592,96.299,24.888,134.754c-0.092,1.421-0.688,2.521-1.467,3.346
-                        c-0.229,1.421-1.1,2.796-2.613,3.209c-13.613,3.713-31.213,0.779-44.964-1.696c-1.421-0.229-1.971-1.329-1.925-2.429
-                        c-0.092-0.183-0.092-0.413-0.137-0.596c-0.871-0.825-1.421-2.108-1.238-3.804c1.421-15.355,2.2-30.709,1.833-46.156
-                        c-0.183-7.654-0.504-15.492-1.375-23.101c-1.925-17.188-19.067-35.751-35.155-21.771c-22.642,19.617-12.421,70.723-10.679,96.94
-                        c0.137,1.788-1.054,2.75-2.383,2.979c-0.413,0.917-1.146,1.742-2.383,2.2c-7.379,2.658-16.18,2.521-23.972,2.658
-                        c-6.967,0.183-14.621,0.779-20.855-2.704c-0.183-0.092-0.275-0.275-0.412-0.458c-1.421-0.642-2.521-1.925-2.613-3.896
-                        c-1.283-47.668-5.958-100.057,3.713-146.946c0.183-0.871,0.642-1.375,1.238-1.65c0.321-0.229,0.642-0.458,1.054-0.596
-                        c10.909-3.071,25.576,0.596,36.714,1.833c3.529,0.367,7.013,0.458,8.892,3.85c0.688,1.283,1.008,2.933,1.1,4.675
-                        C150.769,70.723,188.536,72.281,206.045,87.682z" />
-                        <path style="fill:#000000;" d="M59.787,82.869c0.596,0.871,0.963,1.879,0.871,2.979c-4.629,48.081-5.408,96.207-2.383,144.425
-                        c0.183,3.117-2.658,5.317-5.454,5.5c-13.842,0.779-27.638,1.054-41.526,0.779c-3.071-0.046-5.363-2.475-5.454-5.454
-                        c-1.65-48.035-5.821-101.982,5.363-149.1c0.321-1.329,1.146-2.017,2.108-2.292c0.046-0.137,0.137-0.275,0.229-0.412
-                        c-0.229-0.963,0.183-2.017,1.054-2.521c4.904-3.163,11.917-1.467,17.6-1.512c8.159-0.092,16.363-0.321,24.476,0.137
-                        C61.024,75.673,62.033,80.44,59.787,82.869z" />
-                        <path style="fill:#000000;" d="M37.649,61.693c-1.696,0.138-3.3,0-4.813-0.275c-20.9,3.438-28.967-28.417-19.755-44.459
-                        C18.398,7.7,28.986,0.046,39.986,0c11.321,0,20.488,9.9,24.109,19.892C71.246,39.509,58.962,60.272,37.649,61.693z" />
-                    </g>
-                </svg>
-            </a>
-            <a
-                class="app_container_social_icon"
-                href="https://github.com/JohnTrunix"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
-                </svg>
-            </a>
-            <a
-                class="app_container_social_icon"
-                href="https://www.kaggle.com/johntrunix"
-                target="_blank"
-                rel="noopener noreferrer"
-            >
-                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                    <path style="fill:#000000;" d="M25.099 31.812c-0.025 0.12-0.156 0.188-0.375 0.188h-4.183c-0.249 0-0.468-0.109-0.656-0.328l-6.907-8.787-1.932 1.828v6.817c0 0.313-0.151 0.469-0.463 0.469h-3.245c-0.312 0-0.469-0.156-0.469-0.469v-31.061c0-0.308 0.157-0.469 0.469-0.469h3.245c0.312 0 0.463 0.161 0.463 0.469v19.124l8.271-8.359c0.224-0.224 0.443-0.328 0.661-0.328h4.319c0.192 0 0.317 0.077 0.38 0.239 0.063 0.199 0.047 0.339-0.047 0.417l-8.74 8.459 9.115 11.343c0.125 0.141 0.156 0.276 0.093 0.48z" />
-                </svg>
-            </a>
+        <div class="extra_footer">
+                <a
+                    class="coffee_button_box"
+                    href="https://www.google.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <svg class="coffee_button_svg" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="278" height="278" x="0" y="0" version="1.1" viewBox="0 0 278 278">
+                        <image width="278" height="278" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARYAAAEWCAMAAACUk0h9AAAC31BMVEUAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ EBAgICBvb2/v7+/////Pz8+/v7+QkJBfX18wMDBgYGCfn5/f399/f3+vr6+AgIBQUFCPj49wcHBA QED/9fT/6u//1tz/1d7/1d//3+b/4OL/wcn/tsD/q7j/rLj/t8H/9PagoKD/4OP/tsT/i6L/bIv/ V3z/V33/Vnv/V3v/V3r/gZv/obT/y9b/t73/g5H/ZHr/WXL/WXH/WnH/WXD/eIv/oq7/6u3/rbX/ dpP/Vnz/V3n/WHr/WHn/YoH/lqv/6uz/Y3j/WHL/Wm//WW7/g5L/1tv/rLX/Yn7/WHv/WHj/V3j/ V3f/gpn/6u7/6+r/mKH/WnD/WW//Wm7/Wm3/mKT/zND/bIj/WHf/V3b/WHb/WHX/l6n/uLr/ZHf/ WW3/Wmz/ZHX/t7//o6v/WXX/bob/hI7/W23/W2v/W2z/Wmv/Wmr/rbT/g47/Vnr/WXT/WHT/WHP/ WXP/tsL/4eL/cHz/W2r/W2n/o6f/w8L/W2j/wsH/WHH/wsT/Wmj/XGj/W2f/XGf/cHv/WXf/W27/ ZXD/9PX/WnL/W2b/XGb/XGX/mZ//cHr/WXb/W2//Wmn/W2X/XGT/19b/XGP/rrGwsLD/pKT/XWP/ XGL/Z2z/hYv/XGH/XWL/XWH/4eH/ZXL/XWD/9fX/XGD/XV//pKX/4eD/Xl//kJH/XGn/XWT/XV7/ Xl7/hob/XV3/Xl3/hoX/Xlz/XVz/Xlv/kI7/Zm//X1z/paP/e4H/zcv/mZv/XmL/XmD/W2T/XVr/ cnD/m5lPT0//hYj/XWX/uLj/c3D/Zmz/w8H/rq7/Z2v/fHr/fH7/aGX/6+v/Z2r/ubf/rq3/mpj/ ubj/r67/X1v/Xlr/cm//r63/pKP/aGb/hoT/aWb/zcz/fXoPKrQ1AAAAF3RSTlMAEGCQn4BQQCCv 779vz1+PMN9/cKCwTw5hrCwAAA3SSURBVHja7Z37XxxXFcDDK7xCC2l0WVggAcq2hVZrNVoftIla DcGqSeOj4KMQpWRRKWiLirpZqjxU1hDbgNVK0BgIaqiBCkFiuggClfhIE7Vqa7S20dIYH3+A986d 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" />
+                    </svg>
+                    Buy me a coffee!
+                </a>
+            <div class="social">
+                <a
+                    class="social_icon"
+                    href="https://www.linkedin.com/in/john-truninger/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 236.656 236.656" style="enable-background:new 0 0 236.656 236.656;" xml:space="preserve">
+                        <g>
+                            <path style="fill:#000000;" d="M206.045,87.682c32.726,28.83,27.592,96.299,24.888,134.754c-0.092,1.421-0.688,2.521-1.467,3.346
+                            c-0.229,1.421-1.1,2.796-2.613,3.209c-13.613,3.713-31.213,0.779-44.964-1.696c-1.421-0.229-1.971-1.329-1.925-2.429
+                            c-0.092-0.183-0.092-0.413-0.137-0.596c-0.871-0.825-1.421-2.108-1.238-3.804c1.421-15.355,2.2-30.709,1.833-46.156
+                            c-0.183-7.654-0.504-15.492-1.375-23.101c-1.925-17.188-19.067-35.751-35.155-21.771c-22.642,19.617-12.421,70.723-10.679,96.94
+                            c0.137,1.788-1.054,2.75-2.383,2.979c-0.413,0.917-1.146,1.742-2.383,2.2c-7.379,2.658-16.18,2.521-23.972,2.658
+                            c-6.967,0.183-14.621,0.779-20.855-2.704c-0.183-0.092-0.275-0.275-0.412-0.458c-1.421-0.642-2.521-1.925-2.613-3.896
+                            c-1.283-47.668-5.958-100.057,3.713-146.946c0.183-0.871,0.642-1.375,1.238-1.65c0.321-0.229,0.642-0.458,1.054-0.596
+                            c10.909-3.071,25.576,0.596,36.714,1.833c3.529,0.367,7.013,0.458,8.892,3.85c0.688,1.283,1.008,2.933,1.1,4.675
+                            C150.769,70.723,188.536,72.281,206.045,87.682z" />
+                            <path style="fill:#000000;" d="M59.787,82.869c0.596,0.871,0.963,1.879,0.871,2.979c-4.629,48.081-5.408,96.207-2.383,144.425
+                            c0.183,3.117-2.658,5.317-5.454,5.5c-13.842,0.779-27.638,1.054-41.526,0.779c-3.071-0.046-5.363-2.475-5.454-5.454
+                            c-1.65-48.035-5.821-101.982,5.363-149.1c0.321-1.329,1.146-2.017,2.108-2.292c0.046-0.137,0.137-0.275,0.229-0.412
+                            c-0.229-0.963,0.183-2.017,1.054-2.521c4.904-3.163,11.917-1.467,17.6-1.512c8.159-0.092,16.363-0.321,24.476,0.137
+                            C61.024,75.673,62.033,80.44,59.787,82.869z" />
+                            <path style="fill:#000000;" d="M37.649,61.693c-1.696,0.138-3.3,0-4.813-0.275c-20.9,3.438-28.967-28.417-19.755-44.459
+                            C18.398,7.7,28.986,0.046,39.986,0c11.321,0,20.488,9.9,24.109,19.892C71.246,39.509,58.962,60.272,37.649,61.693z" />
+                        </g>
+                    </svg>
+                </a>
+                <a
+                    class="social_icon"
+                    href="https://github.com/JohnTrunix"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+                    </svg>
+                </a>
+                <a
+                    class="social_icon"
+                    href="https://www.kaggle.com/johntrunix"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <path style="fill:#000000;" d="M25.099 31.812c-0.025 0.12-0.156 0.188-0.375 0.188h-4.183c-0.249 0-0.468-0.109-0.656-0.328l-6.907-8.787-1.932 1.828v6.817c0 0.313-0.151 0.469-0.463 0.469h-3.245c-0.312 0-0.469-0.156-0.469-0.469v-31.061c0-0.308 0.157-0.469 0.469-0.469h3.245c0.312 0 0.463 0.161 0.463 0.469v19.124l8.271-8.359c0.224-0.224 0.443-0.328 0.661-0.328h4.319c0.192 0 0.317 0.077 0.38 0.239 0.063 0.199 0.047 0.339-0.047 0.417l-8.74 8.459 9.115 11.343c0.125 0.141 0.156 0.276 0.093 0.48z" />
+                    </svg>
+                </a>
+            </div>
         </div>
