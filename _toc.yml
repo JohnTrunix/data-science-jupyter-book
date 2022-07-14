@@ -41,14 +41,18 @@ parts:
                         title: Stream Graph Chart
                       - file: visualization/charts/wordcloud
                         title: Wordcloud Chart
-                      - file: visualization/charts/nestedproparea
-                        title: Nested Proportional Area Chart
                       - file: visualization/charts/radialbar
                         title: Radial Bar Chart
                       - file: visualization/charts/chord
                         title: Chord Chart
+                      - file: visualization/charts/gauge
+                        title: Gauge Chart
+                      - file: visualization/charts/parallelcoordinates
+                        title: Parallel Coordinates Chart
                       - file: visualization/charts/sunburst
                         title: Sunburst Chart
+                      - file: visualization/charts/nestedproparea
+                        title: Nested Proportional Area Chart
                       - file: visualization/charts/funnel
                         title: Funnel Chart
                       - file: visualization/charts/hangingrootogram
