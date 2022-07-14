@@ -27,7 +27,8 @@ bibtex_bibfiles:
     - references.bib
 
 repository:
-    url: https://github.com/JohnTrunix/data-science-jupyter-book/ # Online location of your book
+    url: https://github.com/JohnTrunix/data-science-jupyter-book
+    branch: main
 
 sphinx:
     config:
@@ -38,7 +39,7 @@ html:
     favicon: favicon.ico
     use_issues_button: true
     use_repository_button: true
-    baseurl: https://johntrunix.github.io/data-science-jupyter-book/pages/index.html
+    baseurl: https://johntrunix.github.io/data-science-jupyter-book/index.html
     extra_navbar: |
         <div class="extra_footer">
             <script
