@@ -1,0 +1,942 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Matplotlib and Seaborn Config &#8212; My Data Science CheatSheet</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/style.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://johntrunix.github.io/data-science-jupyter-book/pages/index.html/visualization/matplotlib_seaborn.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Graph Familys" href="graphfamilys.html" />
+    <link rel="prev" title="Home" href="../index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My Data Science CheatSheet</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Home
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Data Visualization - 📊
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Matplotlib and Seaborn Config
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="graphfamilys.html">
+   Graph Familys
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="charts/charts.html">
+     Charts
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="charts/pie.html">
+       Pie Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="charts/donut.html">
+       Donut Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="charts/vbar.html">
+       Bar Chart (vertical)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="charts/hbar.html">
+       Bar Chart (horizontal)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="charts/stackedbar.html">
+       Bar Chart (stacked)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="charts/groupedbar.html">
+       Bar Chart (grouped)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="charts/scatter.html">
+       Scatter Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="charts/treemap.html">
+       Treemap Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="charts/heatmap.html">
+       Heatmap Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="charts/radar.html">
+       Radar Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="charts/stackedarea.html">
+       Stacked Area Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="charts/stackedarea100.html">
+       Stacked Area Chart (100%)
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="charts/streamgraph.html">
+       Stream Graph Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="charts/wordcloud.html">
+       Wordcloud Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="charts/nestedproparea.html">
+       Nested Proportional Area Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="charts/radialbar.html">
+       Radial Bar Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="charts/chord.html">
+       Chord Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="charts/sunburst.html">
+       Sunburst Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="charts/funnel.html">
+       Funnel Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="charts/hangingrootogram.html">
+       Hanging Rootogram Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="charts/progressbar.html">
+       Progress Bar Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="charts/polararea.html">
+       Polar Area Chart
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            <div class="extra_footer">
+        <a
+            class="coffee_button_box"
+            href="https://www.google.com"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <svg class="coffee_button_svg" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="278" height="278" x="0" y="0" version="1.1" viewBox="0 0 278 278">
+                <image width="278" height="278" x="0" y="0" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARYAAAEWCAMAAACUk0h9AAAC31BMVEUAAAAAAAAAAAAAAAAAAAAA AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ EBAgICBvb2/v7+/////Pz8+/v7+QkJBfX18wMDBgYGCfn5/f399/f3+vr6+AgIBQUFCPj49wcHBA QED/9fT/6u//1tz/1d7/1d//3+b/4OL/wcn/tsD/q7j/rLj/t8H/9PagoKD/4OP/tsT/i6L/bIv/ V3z/V33/Vnv/V3v/V3r/gZv/obT/y9b/t73/g5H/ZHr/WXL/WXH/WnH/WXD/eIv/oq7/6u3/rbX/ dpP/Vnz/V3n/WHr/WHn/YoH/lqv/6uz/Y3j/WHL/Wm//WW7/g5L/1tv/rLX/Yn7/WHv/WHj/V3j/ V3f/gpn/6u7/6+r/mKH/WnD/WW//Wm7/Wm3/mKT/zND/bIj/WHf/V3b/WHb/WHX/l6n/uLr/ZHf/ WW3/Wmz/ZHX/t7//o6v/WXX/bob/hI7/W23/W2v/W2z/Wmv/Wmr/rbT/g47/Vnr/WXT/WHT/WHP/ WXP/tsL/4eL/cHz/W2r/W2n/o6f/w8L/W2j/wsH/WHH/wsT/Wmj/XGj/W2f/XGf/cHv/WXf/W27/ ZXD/9PX/WnL/W2b/XGb/XGX/mZ//cHr/WXb/W2//Wmn/W2X/XGT/19b/XGP/rrGwsLD/pKT/XWP/ XGL/Z2z/hYv/XGH/XWL/XWH/4eH/ZXL/XWD/9fX/XGD/XV//pKX/4eD/Xl//kJH/XGn/XWT/XV7/ Xl7/hob/XV3/Xl3/hoX/Xlz/XVz/Xlv/kI7/Zm//X1z/paP/e4H/zcv/mZv/XmL/XmD/W2T/XVr/ cnD/m5lPT0//hYj/XWX/uLj/c3D/Zmz/w8H/rq7/Z2v/fHr/fH7/aGX/6+v/Z2r/ubf/rq3/mpj/ ubj/r67/X1v/Xlr/cm//r63/pKP/aGb/hoT/aWb/zcz/fXoPKrQ1AAAAF3RSTlMAEGCQn4BQQCCv 779vz1+PMN9/cKCwTw5hrCwAAA3SSURBVHja7Z37XxxXFcDDK7xCC2l0WVggAcq2hVZrNVoftIla DcGqSeOj4KMQpWRRKWiLirpZqjxU1hDbgNVK0BgIaqiBCkFiuggClfhIE7Vqa7S20dIYH3+A986d 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" />
+            </svg>
+            Buy me a coffee!
+        </a>
+    <div class="social">
+        <a
+            class="social_icon"
+            href="https://www.linkedin.com/in/john-truninger/"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 236.656 236.656" style="enable-background:new 0 0 236.656 236.656;" xml:space="preserve">
+                <g>
+                    <path style="fill:#000000;" d="M206.045,87.682c32.726,28.83,27.592,96.299,24.888,134.754c-0.092,1.421-0.688,2.521-1.467,3.346
+                    c-0.229,1.421-1.1,2.796-2.613,3.209c-13.613,3.713-31.213,0.779-44.964-1.696c-1.421-0.229-1.971-1.329-1.925-2.429
+                    c-0.092-0.183-0.092-0.413-0.137-0.596c-0.871-0.825-1.421-2.108-1.238-3.804c1.421-15.355,2.2-30.709,1.833-46.156
+                    c-0.183-7.654-0.504-15.492-1.375-23.101c-1.925-17.188-19.067-35.751-35.155-21.771c-22.642,19.617-12.421,70.723-10.679,96.94
+                    c0.137,1.788-1.054,2.75-2.383,2.979c-0.413,0.917-1.146,1.742-2.383,2.2c-7.379,2.658-16.18,2.521-23.972,2.658
+                    c-6.967,0.183-14.621,0.779-20.855-2.704c-0.183-0.092-0.275-0.275-0.412-0.458c-1.421-0.642-2.521-1.925-2.613-3.896
+                    c-1.283-47.668-5.958-100.057,3.713-146.946c0.183-0.871,0.642-1.375,1.238-1.65c0.321-0.229,0.642-0.458,1.054-0.596
+                    c10.909-3.071,25.576,0.596,36.714,1.833c3.529,0.367,7.013,0.458,8.892,3.85c0.688,1.283,1.008,2.933,1.1,4.675
+                    C150.769,70.723,188.536,72.281,206.045,87.682z" />
+                    <path style="fill:#000000;" d="M59.787,82.869c0.596,0.871,0.963,1.879,0.871,2.979c-4.629,48.081-5.408,96.207-2.383,144.425
+                    c0.183,3.117-2.658,5.317-5.454,5.5c-13.842,0.779-27.638,1.054-41.526,0.779c-3.071-0.046-5.363-2.475-5.454-5.454
+                    c-1.65-48.035-5.821-101.982,5.363-149.1c0.321-1.329,1.146-2.017,2.108-2.292c0.046-0.137,0.137-0.275,0.229-0.412
+                    c-0.229-0.963,0.183-2.017,1.054-2.521c4.904-3.163,11.917-1.467,17.6-1.512c8.159-0.092,16.363-0.321,24.476,0.137
+                    C61.024,75.673,62.033,80.44,59.787,82.869z" />
+                    <path style="fill:#000000;" d="M37.649,61.693c-1.696,0.138-3.3,0-4.813-0.275c-20.9,3.438-28.967-28.417-19.755-44.459
+                    C18.398,7.7,28.986,0.046,39.986,0c11.321,0,20.488,9.9,24.109,19.892C71.246,39.509,58.962,60.272,37.649,61.693z" />
+                </g>
+            </svg>
+        </a>
+        <a
+            class="social_icon"
+            href="https://github.com/JohnTrunix"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+            </svg>
+        </a>
+        <a
+            class="social_icon"
+            href="https://www.kaggle.com/johntrunix"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <path style="fill:#000000;" d="M25.099 31.812c-0.025 0.12-0.156 0.188-0.375 0.188h-4.183c-0.249 0-0.468-0.109-0.656-0.328l-6.907-8.787-1.932 1.828v6.817c0 0.313-0.151 0.469-0.463 0.469h-3.245c-0.312 0-0.469-0.156-0.469-0.469v-31.061c0-0.308 0.157-0.469 0.469-0.469h3.245c0.312 0 0.463 0.161 0.463 0.469v19.124l8.271-8.359c0.224-0.224 0.443-0.328 0.661-0.328h4.319c0.192 0 0.317 0.077 0.38 0.239 0.063 0.199 0.047 0.339-0.047 0.417l-8.74 8.459 9.115 11.343c0.125 0.141 0.156 0.276 0.093 0.48z" />
+            </svg>
+        </a>
+    </div>
+</div>
+
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/JohnTrunix/data-science-jupyter-book/master?urlpath=tree/visualization/matplotlib_seaborn.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/JohnTrunix/data-science-jupyter-book/"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/JohnTrunix/data-science-jupyter-book//issues/new?title=Issue%20on%20page%20%2Fvisualization/matplotlib_seaborn.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/visualization/matplotlib_seaborn.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualization-frame">
+   Visualization Frame
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#figure-size">
+     Figure Size
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grid">
+     Grid
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#title">
+     Title
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#axis-labels">
+     Axis Labels
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#legend">
+     Legend
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#color">
+   Color
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#single-color">
+     Single Color
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#color-palette">
+     Color Palette
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Matplotlib and Seaborn Config</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualization-frame">
+   Visualization Frame
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#figure-size">
+     Figure Size
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#grid">
+     Grid
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#title">
+     Title
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#axis-labels">
+     Axis Labels
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#legend">
+     Legend
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#color">
+   Color
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#single-color">
+     Single Color
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#color-palette">
+     Color Palette
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="matplotlib-and-seaborn-config">
+<h1>Matplotlib and Seaborn Config<a class="headerlink" href="#matplotlib-and-seaborn-config" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">load_dataset</span><span class="p">(</span><span class="s1">&#39;iris&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepal_length</th>
+      <th>sepal_width</th>
+      <th>petal_length</th>
+      <th>petal_width</th>
+      <th>species</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5.1</td>
+      <td>3.5</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4.9</td>
+      <td>3.0</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4.7</td>
+      <td>3.2</td>
+      <td>1.3</td>
+      <td>0.2</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4.6</td>
+      <td>3.1</td>
+      <td>1.5</td>
+      <td>0.2</td>
+      <td>setosa</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5.0</td>
+      <td>3.6</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>setosa</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<section id="visualization-frame">
+<h2>Visualization Frame<a class="headerlink" href="#visualization-frame" title="Permalink to this headline">#</a></h2>
+<section id="figure-size">
+<h3>Figure Size<a class="headerlink" href="#figure-size" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;sepal_length&quot;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;sepal_width&quot;</span><span class="p">],</span> <span class="n">fit_reg</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/matplotlib_seaborn_5_0.png" src="../_images/matplotlib_seaborn_5_0.png" />
+</div>
+</div>
+</section>
+<section id="grid">
+<h3>Grid<a class="headerlink" href="#grid" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/matplotlib_seaborn_7_0.png" src="../_images/matplotlib_seaborn_7_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#or</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">style</span><span class="o">=</span><span class="s2">&quot;darkgrid&quot;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;sepal_length&quot;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;sepal_width&quot;</span><span class="p">],</span> <span class="n">fit_reg</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/matplotlib_seaborn_8_0.png" src="../_images/matplotlib_seaborn_8_0.png" />
+</div>
+</div>
+</section>
+<section id="title">
+<h3>Title<a class="headerlink" href="#title" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;sepal_length&quot;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;sepal_width&quot;</span><span class="p">],</span> <span class="n">fit_reg</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Iris Dataset&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/matplotlib_seaborn_10_0.png" src="../_images/matplotlib_seaborn_10_0.png" />
+</div>
+</div>
+</section>
+<section id="axis-labels">
+<h3>Axis Labels<a class="headerlink" href="#axis-labels" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">regplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;sepal_length&quot;</span><span class="p">],</span> <span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;sepal_width&quot;</span><span class="p">],</span> <span class="n">fit_reg</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Sepal length&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Sepal width&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/matplotlib_seaborn_12_0.png" src="../_images/matplotlib_seaborn_12_0.png" />
+</div>
+</div>
+</section>
+<section id="legend">
+<h3>Legend<a class="headerlink" href="#legend" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;species&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">(),</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;species&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s2">&quot;Species&quot;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/matplotlib_seaborn_14_0.png" src="../_images/matplotlib_seaborn_14_0.png" />
+</div>
+</div>
+</section>
+</section>
+<section id="color">
+<h2>Color<a class="headerlink" href="#color" title="Permalink to this headline">#</a></h2>
+<section id="single-color">
+<h3>Single Color<a class="headerlink" href="#single-color" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;species&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">(),</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;species&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s2">&quot;green&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;BarContainer object of 3 artists&gt;
+</pre></div>
+</div>
+<img alt="../_images/matplotlib_seaborn_17_1.png" src="../_images/matplotlib_seaborn_17_1.png" />
+</div>
+</div>
+</section>
+<section id="color-palette">
+<h3>Color Palette<a class="headerlink" href="#color-palette" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># plot with colormap virdis</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;species&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">(),</span> <span class="n">y</span><span class="o">=</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;species&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(),</span> <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;viridis&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;AxesSubplot:ylabel=&#39;species&#39;&gt;
+</pre></div>
+</div>
+<img alt="../_images/matplotlib_seaborn_19_1.png" src="../_images/matplotlib_seaborn_19_1.png" />
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./visualization"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="../index.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Home</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="graphfamilys.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Graph Familys</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By John Truninger<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
