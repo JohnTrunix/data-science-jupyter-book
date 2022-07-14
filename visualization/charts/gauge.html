@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Funnel Chart &#8212; My Data Science CheatSheet</title>
+    <title>Gauge Chart &#8212; My Data Science CheatSheet</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,12 +52,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://johntrunix.github.io/data-science-jupyter-book/index.html/visualization/charts/funnel.html" />
+    <link rel="canonical" href="https://johntrunix.github.io/data-science-jupyter-book/index.html/visualization/charts/gauge.html" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Hanging Rootogram Chart" href="hangingrootogram.html" />
-    <link rel="prev" title="Nested Proportional Area Chart" href="nestedproparea.html" />
+    <link rel="next" title="Parallel Coordinates Chart" href="parallelcoordinates.html" />
+    <link rel="prev" title="Chord Chart" href="chord.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -228,8 +228,8 @@ const thebe_selector_output = ".output, .cell_output"
        Chord Chart
       </a>
      </li>
-     <li class="toctree-l3">
-      <a class="reference internal" href="gauge.html">
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
        Gauge Chart
       </a>
      </li>
@@ -248,8 +248,8 @@ const thebe_selector_output = ".output, .cell_output"
        Nested Proportional Area Chart
       </a>
      </li>
-     <li class="toctree-l3 current active">
-      <a class="current reference internal" href="#">
+     <li class="toctree-l3">
+      <a class="reference internal" href="funnel.html">
        Funnel Chart
       </a>
      </li>
@@ -390,7 +390,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/JohnTrunix/data-science-jupyter-book/main?urlpath=tree/visualization/charts/funnel.ipynb"
+        <a href="https://mybinder.org/v2/gh/JohnTrunix/data-science-jupyter-book/main?urlpath=tree/visualization/charts/gauge.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -450,7 +450,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/JohnTrunix/data-science-jupyter-book/issues/new?title=Issue%20on%20page%20%2Fvisualization/charts/funnel.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/JohnTrunix/data-science-jupyter-book/issues/new?title=Issue%20on%20page%20%2Fvisualization/charts/gauge.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -478,7 +478,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../../_sources/visualization/charts/funnel.ipynb"
+        <a href="../../_sources/visualization/charts/gauge.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -527,7 +527,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Funnel Chart</h1>
+                <h1>Gauge Chart</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -539,21 +539,22 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="funnel-chart">
-<h1>Funnel Chart<a class="headerlink" href="#funnel-chart" title="Permalink to this headline">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="gauge-chart">
+<h1>Gauge Chart<a class="headerlink" href="#gauge-chart" title="Permalink to this headline">#</a></h1>
 <div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
 <div class="sd-card-body docutils">
 <br/>
 <div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
 <div class="sd-row sd-row-cols-2 sd-row-cols-xs-2 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 docutils">
 <div class="sd-col sd-d-flex-column sd-col-3 sd-col-xs-3 sd-col-sm-3 sd-col-md-3 sd-col-lg-3 sd-m-auto docutils">
-<a class="reference internal image-reference" href="../../_images/funnel.png"><img alt="../../_images/funnel.png" src="../../_images/funnel.png" style="width: 300px;" /></a>
+<a class="reference internal image-reference" href="../../_images/gauge.png"><img alt="../../_images/gauge.png" src="../../_images/gauge.png" style="width: 300px;" /></a>
 </div>
 <div class="sd-col sd-d-flex-column sd-col-8 sd-col-xs-8 sd-col-sm-8 sd-col-md-8 sd-col-lg-8 docutils">
-<p class="sd-card-text">A funnel chart is used to show streamlined data; each slice in the funnel represents a process that has filtered out data. The last funnel bears the value that is the final result of the entire procedure. A funnel chart displays values as progressively decreasing proportions amounting to 100 percent in total. The size of the area is determined by the series value as a percentage of the total of all values. Any funnel consists of the higher part called head (or base) and the lower part referred to as neck.</p>
+<p class="sd-card-text">Also called: Semi Circle Donut Chart</p>
+<p class="sd-card-text">Gauge Chart is simply a Donut Chart cut in half. The elements are still divided into sectors, illustrating numerical proportion like a basic pie or donut chart.</p>
 <br/>
 <p class="sd-card-text">Functions:</p>
-<p class="sd-card-text"><span class="sd-sphinx-override sd-badge sd-outline-info sd-text-info">Trend over time</span> <span class="sd-sphinx-override sd-badge sd-outline-info sd-text-info">Part of whole</span></p>
+<p class="sd-card-text"><span class="sd-sphinx-override sd-badge sd-outline-info sd-text-info">Comparison</span></p>
 </div>
 </div>
 </div>
@@ -568,16 +569,17 @@ title="Print to PDF"
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">14</span><span class="p">)</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">])</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Group&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Value&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">150</span><span class="p">,</span> <span class="mi">300</span><span class="p">,</span> <span class="mi">220</span><span class="p">,</span> <span class="mi">100</span><span class="p">]}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Group&#39;</span><span class="p">,</span> <span class="s1">&#39;Value&#39;</span><span class="p">])</span>
+<span class="n">total</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;Group&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">],</span> <span class="s1">&#39;Value&#39;</span><span class="p">:</span> <span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()]})</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="p">,</span> <span class="n">total</span><span class="p">])</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -601,29 +603,35 @@ title="Print to PDF"
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>data</th>
+      <th>Group</th>
+      <th>Value</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>4</th>
-      <td>89</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>72</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>29</td>
+      <th>0</th>
+      <td>A</td>
+      <td>150</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>23</td>
+      <td>B</td>
+      <td>300</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C</td>
+      <td>220</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>D</td>
+      <td>100</td>
     </tr>
     <tr>
       <th>0</th>
-      <td>13</td>
+      <td></td>
+      <td>770</td>
     </tr>
   </tbody>
 </table>
@@ -632,26 +640,18 @@ title="Print to PDF"
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mpl</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;seaborn&#39;</span><span class="p">)</span>
-<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#FBD87F&#39;</span><span class="p">,</span> <span class="s1">&#39;#829CBC&#39;</span><span class="p">,</span> <span class="s1">&#39;#376996&#39;</span><span class="p">,</span> <span class="s1">&#39;#023E7D&#39;</span><span class="p">,</span> <span class="s1">&#39;#002855&#39;</span><span class="p">]</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#002855&#39;</span><span class="p">,</span> <span class="s1">&#39;#FBD87F&#39;</span><span class="p">,</span> <span class="s1">&#39;#023E7D&#39;</span><span class="p">,</span> <span class="s1">&#39;#376996&#39;</span><span class="p">,</span> <span class="s1">&#39;white&#39;</span><span class="p">]</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
-
-
-<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">data</span><span class="p">):</span>
-    <span class="n">left</span> <span class="o">=</span> <span class="p">(</span><span class="mi">100</span> <span class="o">-</span> <span class="n">val</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="n">val</span><span class="p">,</span> <span class="n">left</span> <span class="o">=</span> <span class="n">left</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="n">idx</span><span class="p">],</span> <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">val</span><span class="si">}</span><span class="s1">%&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">idx</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">left</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#F8C23A&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="n">idx</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;100%&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">Value</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">df</span><span class="o">.</span><span class="n">Group</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">plt</span><span class="o">.</span><span class="n">Circle</span><span class="p">((</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="mf">0.6</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/funnel_3_0.png" src="../../_images/funnel_3_0.png" />
+<img alt="../../_images/gauge_3_0.png" src="../../_images/gauge_3_0.png" />
 </div>
 </div>
 </section>
@@ -683,17 +683,17 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="nestedproparea.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="chord.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Nested Proportional Area Chart</p>
+            <p class="prev-next-title">Chord Chart</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="hangingrootogram.html" title="next page">
+    <a class='right-next' id="next-link" href="parallelcoordinates.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Hanging Rootogram Chart</p>
+        <p class="prev-next-title">Parallel Coordinates Chart</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

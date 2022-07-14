@@ -56,7 +56,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Nested Proportional Area Chart" href="nestedproparea.html" />
+    <link rel="next" title="Radial Bar Chart" href="radialbar.html" />
     <link rel="prev" title="Stream Graph Chart" href="streamgraph.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -219,11 +219,6 @@ const thebe_selector_output = ".output, .cell_output"
       </a>
      </li>
      <li class="toctree-l3">
-      <a class="reference internal" href="nestedproparea.html">
-       Nested Proportional Area Chart
-      </a>
-     </li>
-     <li class="toctree-l3">
       <a class="reference internal" href="radialbar.html">
        Radial Bar Chart
       </a>
@@ -234,8 +229,23 @@ const thebe_selector_output = ".output, .cell_output"
       </a>
      </li>
      <li class="toctree-l3">
+      <a class="reference internal" href="gauge.html">
+       Gauge Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="parallelcoordinates.html">
+       Parallel Coordinates Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
       <a class="reference internal" href="sunburst.html">
        Sunburst Chart
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="nestedproparea.html">
+       Nested Proportional Area Chart
       </a>
      </li>
      <li class="toctree-l3">
@@ -637,72 +647,6 @@ title="Print to PDF"
 <img alt="../../_images/wordcloud_3_0.png" src="../../_images/wordcloud_3_0.png" />
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#F8C23A&#39;</span><span class="p">,</span> <span class="s1">&#39;#FBD87F&#39;</span><span class="p">,</span> <span class="s1">&#39;#002855&#39;</span><span class="p">,</span> <span class="s1">&#39;#023E7D&#39;</span><span class="p">,</span> <span class="s1">&#39;#376996&#39;</span><span class="p">,</span> <span class="s1">&#39;#829CBC&#39;</span><span class="p">]</span>
-
-<span class="n">wordcloud</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">(</span><span class="n">width</span><span class="o">=</span><span class="mi">1200</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">400</span><span class="p">,</span> <span class="n">background_color</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">colormap</span><span class="o">=</span><span class="n">mpl</span><span class="o">.</span><span class="n">colors</span><span class="o">.</span><span class="n">ListedColormap</span><span class="p">(</span><span class="n">colors</span><span class="p">))</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Name&#39;</span><span class="p">]))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">wordcloud</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="nn">c:\Users\JohnT\GithubProjects\data-science-jupyter-book\visualization\charts\wordcloud.ipynb Zelle 5</span> in <span class="ni">&lt;cell line: 6&gt;</span><span class="nt">()</span>
-      <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/c%3A/Users/JohnT/GithubProjects/data-science-jupyter-book/visualization/charts/wordcloud.ipynb#ch0000004?line=3&#39;</span><span class="o">&gt;</span><span class="mi">4</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">wordcloud</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;bilinear&#39;</span><span class="p">)</span>
-      <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/c%3A/Users/JohnT/GithubProjects/data-science-jupyter-book/visualization/charts/wordcloud.ipynb#ch0000004?line=4&#39;</span><span class="o">&gt;</span><span class="mi">5</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
-<span class="o">----&gt;</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;vscode-notebook-cell:/c%3A/Users/JohnT/GithubProjects/data-science-jupyter-book/visualization/charts/wordcloud.ipynb#ch0000004?line=5&#39;</span><span class="o">&gt;</span><span class="mi">6</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">dpi</span><span class="o">=</span><span class="p">(</span><span class="mi">1200</span><span class="p">,</span> <span class="mi">400</span><span class="p">))</span>
-
-<span class="nn">File c:\Users\JohnT\AppData\Local\Programs\Python\Python310\lib\site-packages\matplotlib\pyplot.py:808,</span> in <span class="ni">figure</span><span class="nt">(num, figsize, dpi, facecolor, edgecolor, frameon, FigureClass, clear, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">799</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">allnums</span><span class="p">)</span> <span class="o">==</span> <span class="n">max_open_warning</span> <span class="o">&gt;=</span> <span class="mi">1</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">800</span>     <span class="n">_api</span><span class="o">.</span><span class="n">warn_external</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">801</span>         <span class="sa">f</span><span class="s2">&quot;More than </span><span class="si">{</span><span class="n">max_open_warning</span><span class="si">}</span><span class="s2"> figures have been opened. &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">802</span>         <span class="sa">f</span><span class="s2">&quot;Figures created through the pyplot interface &quot;</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">805</span>         <span class="sa">f</span><span class="s2">&quot;warning, see the rcParam `figure.max_open_warning`).&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">806</span>         <span class="ne">RuntimeWarning</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">808</span> <span class="n">manager</span> <span class="o">=</span> <span class="n">new_figure_manager</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">809</span>     <span class="n">num</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="n">figsize</span><span class="p">,</span> <span class="n">dpi</span><span class="o">=</span><span class="n">dpi</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">810</span>     <span class="n">facecolor</span><span class="o">=</span><span class="n">facecolor</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="n">edgecolor</span><span class="p">,</span> <span class="n">frameon</span><span class="o">=</span><span class="n">frameon</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">811</span>     <span class="n">FigureClass</span><span class="o">=</span><span class="n">FigureClass</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">812</span> <span class="n">fig</span> <span class="o">=</span> <span class="n">manager</span><span class="o">.</span><span class="n">canvas</span><span class="o">.</span><span class="n">figure</span>
-<span class="g g-Whitespace">    </span><span class="mi">813</span> <span class="k">if</span> <span class="n">fig_label</span><span class="p">:</span>
-
-<span class="nn">File c:\Users\JohnT\AppData\Local\Programs\Python\Python310\lib\site-packages\matplotlib\pyplot.py:327,</span> in <span class="ni">new_figure_manager</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">325</span> <span class="sd">&quot;&quot;&quot;Create a new figure manager instance.&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">326</span> <span class="n">_warn_if_gui_out_of_main_thread</span><span class="p">()</span>
-<span class="ne">--&gt; </span><span class="mi">327</span> <span class="k">return</span> <span class="n">_get_backend_mod</span><span class="p">()</span><span class="o">.</span><span class="n">new_figure_manager</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File c:\Users\JohnT\AppData\Local\Programs\Python\Python310\lib\site-packages\matplotlib\backend_bases.py:3493,</span> in <span class="ni">_Backend.new_figure_manager</span><span class="nt">(cls, num, *args, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3491</span> <span class="kn">from</span> <span class="nn">matplotlib.figure</span> <span class="kn">import</span> <span class="n">Figure</span>
-<span class="g g-Whitespace">   </span><span class="mi">3492</span> <span class="n">fig_cls</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;FigureClass&#39;</span><span class="p">,</span> <span class="n">Figure</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">3493</span> <span class="n">fig</span> <span class="o">=</span> <span class="n">fig_cls</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3494</span> <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">new_figure_manager_given_figure</span><span class="p">(</span><span class="n">num</span><span class="p">,</span> <span class="n">fig</span><span class="p">)</span>
-
-<span class="nn">File c:\Users\JohnT\AppData\Local\Programs\Python\Python310\lib\site-packages\matplotlib\figure.py:2338,</span> in <span class="ni">Figure.__init__</span><span class="nt">(self, figsize, dpi, facecolor, edgecolor, linewidth, frameon, subplotpars, tight_layout, constrained_layout, layout, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2334</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;figure size must be positive finite not &#39;</span>
-<span class="g g-Whitespace">   </span><span class="mi">2335</span>                      <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">figsize</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2336</span> <span class="bp">self</span><span class="o">.</span><span class="n">bbox_inches</span> <span class="o">=</span> <span class="n">Bbox</span><span class="o">.</span><span class="n">from_bounds</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">*</span><span class="n">figsize</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">2338</span> <span class="bp">self</span><span class="o">.</span><span class="n">dpi_scale_trans</span> <span class="o">=</span> <span class="n">Affine2D</span><span class="p">()</span><span class="o">.</span><span class="n">scale</span><span class="p">(</span><span class="n">dpi</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2339</span> <span class="c1"># do not use property as it will trigger</span>
-<span class="g g-Whitespace">   </span><span class="mi">2340</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dpi</span> <span class="o">=</span> <span class="n">dpi</span>
-
-<span class="nn">File c:\Users\JohnT\AppData\Local\Programs\Python\Python310\lib\site-packages\matplotlib\transforms.py:2071,</span> in <span class="ni">Affine2D.scale</span><span class="nt">(self, sx, sy)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2069</span>     <span class="n">sy</span> <span class="o">=</span> <span class="n">sx</span>
-<span class="g g-Whitespace">   </span><span class="mi">2070</span> <span class="c1"># explicit element-wise scaling is fastest</span>
-<span class="ne">-&gt; </span><span class="mi">2071</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mtx</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">*=</span> <span class="n">sx</span>
-<span class="g g-Whitespace">   </span><span class="mi">2072</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mtx</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">*=</span> <span class="n">sx</span>
-<span class="g g-Whitespace">   </span><span class="mi">2073</span> <span class="bp">self</span><span class="o">.</span><span class="n">_mtx</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">*=</span> <span class="n">sx</span>
-
-<span class="ne">TypeError</span>: can&#39;t multiply sequence by non-int of type &#39;numpy.float64&#39;
-</pre></div>
-</div>
-<img alt="../../_images/wordcloud_4_1.png" src="../../_images/wordcloud_4_1.png" />
-</div>
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -739,10 +683,10 @@ title="Print to PDF"
             <p class="prev-next-title">Stream Graph Chart</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="nestedproparea.html" title="next page">
+    <a class='right-next' id="next-link" href="radialbar.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Nested Proportional Area Chart</p>
+        <p class="prev-next-title">Radial Bar Chart</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
