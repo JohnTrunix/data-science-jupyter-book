@@ -29,17 +29,63 @@ bibtex_bibfiles:
 repository:
     url: https://github.com/JohnTrunix/data-science-jupyter-book/ # Online location of your book
 
+sphinx:
+    config:
+        mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+        html_js_files: https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
+
 html:
     favicon: favicon.ico
     use_issues_button: true
     use_repository_button: true
     baseurl: https://johntrunix.github.io/data-science-jupyter-book/pages/index.html
     extra_navbar: |
-        <div>
-            Extra Footer, comming soon!
+        <div class="app_container_social">
+            <a
+                class="app_container_social_icon"
+                href="https://www.linkedin.com/in/john-truninger/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 236.656 236.656" style="enable-background:new 0 0 236.656 236.656;" xml:space="preserve">
+                    <g>
+                        <path style="fill:#000000;" d="M206.045,87.682c32.726,28.83,27.592,96.299,24.888,134.754c-0.092,1.421-0.688,2.521-1.467,3.346
+                        c-0.229,1.421-1.1,2.796-2.613,3.209c-13.613,3.713-31.213,0.779-44.964-1.696c-1.421-0.229-1.971-1.329-1.925-2.429
+                        c-0.092-0.183-0.092-0.413-0.137-0.596c-0.871-0.825-1.421-2.108-1.238-3.804c1.421-15.355,2.2-30.709,1.833-46.156
+                        c-0.183-7.654-0.504-15.492-1.375-23.101c-1.925-17.188-19.067-35.751-35.155-21.771c-22.642,19.617-12.421,70.723-10.679,96.94
+                        c0.137,1.788-1.054,2.75-2.383,2.979c-0.413,0.917-1.146,1.742-2.383,2.2c-7.379,2.658-16.18,2.521-23.972,2.658
+                        c-6.967,0.183-14.621,0.779-20.855-2.704c-0.183-0.092-0.275-0.275-0.412-0.458c-1.421-0.642-2.521-1.925-2.613-3.896
+                        c-1.283-47.668-5.958-100.057,3.713-146.946c0.183-0.871,0.642-1.375,1.238-1.65c0.321-0.229,0.642-0.458,1.054-0.596
+                        c10.909-3.071,25.576,0.596,36.714,1.833c3.529,0.367,7.013,0.458,8.892,3.85c0.688,1.283,1.008,2.933,1.1,4.675
+                        C150.769,70.723,188.536,72.281,206.045,87.682z" />
+                        <path style="fill:#000000;" d="M59.787,82.869c0.596,0.871,0.963,1.879,0.871,2.979c-4.629,48.081-5.408,96.207-2.383,144.425
+                        c0.183,3.117-2.658,5.317-5.454,5.5c-13.842,0.779-27.638,1.054-41.526,0.779c-3.071-0.046-5.363-2.475-5.454-5.454
+                        c-1.65-48.035-5.821-101.982,5.363-149.1c0.321-1.329,1.146-2.017,2.108-2.292c0.046-0.137,0.137-0.275,0.229-0.412
+                        c-0.229-0.963,0.183-2.017,1.054-2.521c4.904-3.163,11.917-1.467,17.6-1.512c8.159-0.092,16.363-0.321,24.476,0.137
+                        C61.024,75.673,62.033,80.44,59.787,82.869z" />
+                        <path style="fill:#000000;" d="M37.649,61.693c-1.696,0.138-3.3,0-4.813-0.275c-20.9,3.438-28.967-28.417-19.755-44.459
+                        C18.398,7.7,28.986,0.046,39.986,0c11.321,0,20.488,9.9,24.109,19.892C71.246,39.509,58.962,60.272,37.649,61.693z" />
+                    </g>
+                </svg>
+            </a>
+            <a
+                class="app_container_social_icon"
+                href="https://github.com/JohnTrunix"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+                </svg>
+            </a>
+            <a
+                class="app_container_social_icon"
+                href="https://www.kaggle.com/johntrunix"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                    <path style="fill:#000000;" d="M25.099 31.812c-0.025 0.12-0.156 0.188-0.375 0.188h-4.183c-0.249 0-0.468-0.109-0.656-0.328l-6.907-8.787-1.932 1.828v6.817c0 0.313-0.151 0.469-0.463 0.469h-3.245c-0.312 0-0.469-0.156-0.469-0.469v-31.061c0-0.308 0.157-0.469 0.469-0.469h3.245c0.312 0 0.463 0.161 0.463 0.469v19.124l8.271-8.359c0.224-0.224 0.443-0.328 0.661-0.328h4.319c0.192 0 0.317 0.077 0.38 0.239 0.063 0.199 0.047 0.339-0.047 0.417l-8.74 8.459 9.115 11.343c0.125 0.141 0.156 0.276 0.093 0.48z" />
+                </svg>
+            </a>
         </div>
-
-sphinx:
-    config:
-        mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-        html_js_files: https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
