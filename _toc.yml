@@ -25,12 +25,28 @@ parts:
                         title: Bar Chart (stacked)
                       - file: visualization/charts/groupedbar
                         title: Bar Chart (grouped)
+                      - file: visualization/charts/rangebar
+                        title: Bar Chart (range)
+                      - file: visualization/charts/lollipopbar
+                        title: Bar Chart (lollipop)
+                      - file: visualization/charts/candlestickbar
+                        title: Bar Chart (candlestick)
+                      - file: visualization/charts/waterfall
+                        title: Waterfall Chart
                       - file: visualization/charts/scatter
                         title: Scatter Chart
+                      - file: visualization/charts/histogram
+                        title: Histogram Chart
+                      - file: visualization/charts/pareto
+                        title: Pareto Chart
                       - file: visualization/charts/treemap
                         title: Treemap Chart
                       - file: visualization/charts/heatmap
                         title: Heatmap Chart
+                      - file: visualization/charts/waffle
+                        title: Waffle Chart
+                      - file: visualization/charts/rangearea
+                        title: Area Chart (range)
                       - file: visualization/charts/radar
                         title: Radar Chart
                       - file: visualization/charts/stackedarea
@@ -39,6 +55,12 @@ parts:
                         title: Stacked Area Chart (100%)
                       - file: visualization/charts/streamgraph
                         title: Stream Graph Chart
+                      - file: visualization/charts/sparkline
+                        title: Sparkline Chart
+                      - file: visualization/charts/dotplot
+                        title: Dot Plot Chart
+                      - file: visualization/charts/populationpyramid
+                        title: Population Pyramid Chart
                       - file: visualization/charts/wordcloud
                         title: Wordcloud Chart
                       - file: visualization/charts/radialbar

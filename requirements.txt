@@ -6,3 +6,6 @@ wordcloud
 matplotlib_venn
 plotly
 mpl_chord_diagram
+waterfallcharts
+mplfinance
+pywafle
