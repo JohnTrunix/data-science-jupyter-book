@@ -1,0 +1,5 @@
+# Part of whole
+
+```{tableofcontents}
+
+```

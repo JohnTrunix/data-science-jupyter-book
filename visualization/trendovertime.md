@@ -1,4 +1,4 @@
-# Graph Familys
+# Trend over time
 
 ```{tableofcontents}
 
